@@ -28,6 +28,10 @@ namespace Samples.MVC4
                             subResource = UrlParameter.Optional
                         }
                 );
+routes.MapRoute(
+name: "signin-google",
+url: "signin-google",
+defaults: new { controller = "Account", action = "ExternalLoginCallback" });
         }
     }
 }
